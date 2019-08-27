@@ -1,0 +1,8 @@
+<h2>Receive Message here</h2>
+<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+<script type="text/javascript">
+  let socket = io.connect('localhost:7001');
+  socket.on('sendAlert', () => {
+    alert("This is alert popup");
+  });
+</script>

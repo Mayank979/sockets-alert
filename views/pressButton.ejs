@@ -1,0 +1,10 @@
+<h3>PressButton page</h3>
+<button type="button" id='button' name="button">Click Me!!</button>
+<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+<script type="text/javascript">
+  let socket = io.connect('localhost:7001');
+  let button = document.getElementById('button');
+  button.addEventListener('click', () =>{
+    socket.emit('buttonPressed');
+  });
+</script>
